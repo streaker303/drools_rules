@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "name": "暴力破解事件",
+      "is_sys": 1,
+      "id": 1
+    },
+    {
+      "name": "钓鱼邮件事件",
+      "is_sys": 1,
+      "id": 2
+    },
+    {
+      "is_sys": 1,
+      "id": 3,
+      "name": "拒绝服务事件"
+    },
+    {
+      "name": "木马后门事件",
+      "is_sys": 1,
+      "id": 4
+    },
+    {
+      "is_sys": 1,
+      "name": "数据窃取事件",
+      "id": 5
+    },
+    {
+      "is_sys": 1,
+      "id": 6,
+      "name": "异常登录事件"
+    },
+    {
+      "name": "漏洞攻击事件",
+      "is_sys": 1,
+      "id": 7
+    },
+    {
+      "id": 8,
+      "is_sys": 1,
+      "name": "ATT&CK-侦查跟踪"
+    },
+    {
+      "id": 9,
+      "name": "ATT&CK-武器构建",
+      "is_sys": 1
+    },
+    {
+      "name": "ATT&CK-载荷传递",
+      "id": 10,
+      "is_sys": 1
+    },
+    {
+      "id": 11,
+      "name": "ATT&CK-漏洞利用",
+      "is_sys": 1
+    },
+    {
+      "name": "ATT&CK-安装植入",
+      "id": 12,
+      "is_sys": 1
+    },
+    {
+      "id": 13,
+      "name": "ATT&CK-命令与控制",
+      "is_sys": 1
+    },
+    {
+      "id": 14,
+      "is_sys": 1,
+      "name": "ATT&CK-目标达成"
+    },
+    {
+      "name": "危害关键服务与设施事件",
+      "id": 15,
+      "is_sys": 0
+    }
+  ],
+  "code": 1,
+  "message": "success"
+}

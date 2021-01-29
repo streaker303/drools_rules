@@ -1,0 +1,9 @@
+.top-bar .swiper-container-box{
+	width:84%!important;
+}
+.top-bar .nav-menu{
+	width:16%!important;
+}
+.overview .statistic-item .icon {
+	margin: 0 30px 0 20px!important;
+}

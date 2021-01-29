@@ -1,0 +1,63 @@
+.right-content .btn-gradient{
+	border: 0;
+	background: #449aff; /* Old browsers */
+	background: -moz-linear-gradient(left, #449aff 0%, #37d5fc 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #449aff 0%,#37d5fc 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #449aff 0%,#37d5fc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.right-content .btn-gradient:hover,.right-content .btn-gradient:hover{
+	background: #449aff; /* Old browsers */
+	background: -moz-linear-gradient(left, #37d5fc 0%, #449aff 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #37d5fc 0%,#449aff 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #37d5fc 0%,#449aff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.el-table thead .green th{
+	color: #2fc8b3;
+	font-weight: normal;
+}
+/* // .el-table thead .green th>.cell{
+// 	white-space:nowrap;
+// } */
+.table-border{
+	border: 1px solid #d5d8e8;
+	border-radius: 6px;
+}
+
+
+/* 右侧title */
+.right-title {
+		font-size: 14px;
+		color: #37394e;
+		font-weight: normal;
+		height: 50px;
+		line-height: 50px;
+		background: #f3f3f5;
+		position: relative;
+	}
+.right-title:before{
+	content: '';
+	position: absolute;
+	left:-30px;
+	top:0;
+	width:30px;
+	height:50px;
+	background:#f3f3f5;
+}
+.right-title:after{
+	content: '';
+	position: absolute;
+	right:-20px;
+	top:0;
+	width:20px;
+	height:50px;
+	background:#f3f3f5;
+}
+.right-title span{
+	margin-right: 5px;
+}
+
+.home .el-table th>.cell{
+	white-space: nowrap;
+	text-overflow: initial;
+}
