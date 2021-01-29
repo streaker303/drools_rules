@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<link rel="shortcut icon" href="./static/img/favicon.ico" type="image/x-icon">
+		<title></title>
+		<script src="./static/js/jquery.min.js"></script>
+		<script src="./static/js/swiper.min.js"></script>
+        <script src="./static/js/sockjs.js"></script>
+        <script src="./static/js/stomp.min.js"></script>
+		<link rel="stylesheet" href="./static/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="./static/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./static/css/jsmind.css" />
+		<link rel="stylesheet" href="./static/css/public.css" />
+		<link rel="stylesheet" href="./static/css/reset.css" />
+		<script src="./static/js/sockjs.js"></script>
+    	<script src="./static/js/stomp.min.js"></script>
+		<script>
+			// 分辨率大于等于1680，大部分为1920的情况下，调用此css
+		    if(window.screen.width > 1680){
+		        document.write('<link rel="stylesheet" href="./static/css/index_1920.css">');
+		    }
+		    // 分辨率再在1600-1680的情况下，调用此css
+		    else if(window.screen.width >= 1600){
+		        document.write('<link rel="stylesheet" href="./static/css/index_1600.css">');
+		    }
+		    // 分辨率小于1600的情况下，调用此css
+		    else{
+		        document.write('<link rel="stylesheet" href="./static/css/index.css">');
+		    }
+		</script>
+    </head>
+
+	<body>
+		<div id="app"></div>
+		<script type="text/javascript" src="./static/js/echarts.min.js"></script>
+		<script type="text/javascript" src="./static/js/jsmind.js"></script>
+		<script type="text/javascript" src="./static/js/jsmind.draggable.js"></script>
+		<!--<script src="./static/js/particles.min.js"></script>-->
+		<!-- built files will be auto injected -->
+	</body>
+</html>

@@ -1,0 +1,35 @@
+.top-bar .swiper-container-box{
+	width:76%!important;
+}
+.top-bar .nav-menu{
+	width:22%!important;
+}
+
+.logo-title {
+		width:20%!important;
+	}
+.top-right{
+	width:80%!important;
+}
+.logo-title img{
+	width:68%!important;
+	margin-top: -10px!important;
+}
+.top-menu {
+    width: 80px!important;
+}
+.left-bar {
+		width: 225px!important;
+}
+.right-content {
+		left: 225px!important;
+}
+.menu-item {
+		width:175px!important;
+}
+.inspection-time{
+	width:270px!important;
+}
+.container .bg-area {
+    width: calc(100% + 360px)!important;
+}
