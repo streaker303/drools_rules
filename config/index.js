@@ -9,7 +9,7 @@ module.exports = {
 
     // Paths
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: './',
     // Various Dev Server settings
     host: '127.0.0.1', // can be overwritten by process.env.HOST
 		// host: '192.168.124.10', // can be overwritten by process.env.HOST
