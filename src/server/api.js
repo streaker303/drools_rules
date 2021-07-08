@@ -180,7 +180,7 @@ export const get_menu = (data) => {
 // 告警类别--规则
 export const get_alarm_type_rule = (data) => {
     return axios.request({
-        url: '../../../static/json/alarmType.json',
+        url: '/static/json/alarmType.json',
         method: 'get',
         params: data.queryData,
         data: data.paramsData,
@@ -287,7 +287,7 @@ export const get_voice_level = (data) => {
 // 规则-获取攻击结果
 export const get_rule_attack_result = (data) => {
     return axios.request({
-        url: '../../../static/json/attackResult.json',
+        url: '/static/json/attackResult.json',
         method: 'get',
         params: data.queryData,
         data: data.paramsData,
@@ -299,7 +299,7 @@ export const get_rule_attack_result = (data) => {
 // 规则--资产下拉
 export const getAssetsSelect = (data) => {
     return axios.request({
-        url: '../../../static/json/assetSelect.json',
+        url: '/static/json/assetSelect.json',
         method: 'get',
         data: data,
     }).then(result => {
@@ -310,7 +310,7 @@ export const getAssetsSelect = (data) => {
 // 规则--标签
 export const getSubjectLabel = (data) => {
     return axios.request({
-        url: '../../../static/json/label.json',
+        url: '/static/json/label.json',
         method: 'get',
         data: data,
     }).then(result => {
