@@ -15,16 +15,16 @@ export let axios_config = () => {
 function getCookie(name) {
     var prefix = name + "="
     var start = document.cookie.indexOf(prefix)
- 
+
     if (start == -1) {
         return null;
     }
- 
+
     var end = document.cookie.indexOf(";", start + prefix.length)
     if (end == -1) {
         end = document.cookie.length;
     }
- 
+
     var value = document.cookie.substring(start + prefix.length, end)
     return unescape(value);
 }
@@ -114,7 +114,7 @@ var getAjaxSome = result => {
 //规则组接口
 export const get_rule_tree = (data) => {
 	return axios.request({
-		url: 'http://localhost:8093/static/json/ruleTree.json',
+		url: '../../../static/json/ruleTree.json',
 		method: 'get',
 		params: data.queryData,
 		data: data.paramsData,
