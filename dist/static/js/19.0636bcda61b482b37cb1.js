@@ -1,0 +1,1 @@
+webpackJsonp([19],{SBJg:function(a,e){a.exports={data:[{name:"成功",id:"8a8be6ac73fb94f00173fc02d1d10004"},{name:"失陷",id:"8a8be6ac740050d2017400d1de3f0001"},{name:"企图",id:"8a8be6ac74101dca01741aaa455f0000"},{id:"8a8be6ac74b37eed0174b475e2490000",name:"平局"}],code:1,message:"success"}}});

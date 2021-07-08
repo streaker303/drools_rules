@@ -179,14 +179,9 @@ export const get_menu = (data) => {
 
 // 告警类别--规则
 export const get_alarm_type_rule = (data) => {
-    return axios.request({
-        url: '/static/json/alarmType.json',
-        method: 'get',
-        params: data.queryData,
-        data: data.paramsData,
-    }).then(result => {
+    return import('../../static/json/alarmType.json').then(result => {
         console.log(result)
-        return getAjax(result);
+        return result.data
     })
 }
 // 告警类型
@@ -286,36 +281,23 @@ export const get_voice_level = (data) => {
 }
 // 规则-获取攻击结果
 export const get_rule_attack_result = (data) => {
-    return axios.request({
-        url: '/static/json/attackResult.json',
-        method: 'get',
-        params: data.queryData,
-        data: data.paramsData,
-    }).then(result => {
+    return import('../../static/json/attackResult.json').then(result => {
         console.log(result)
-        return getAjax(result);
+        return result.data
     })
 }
 // 规则--资产下拉
 export const getAssetsSelect = (data) => {
-    return axios.request({
-        url: '/static/json/assetSelect.json',
-        method: 'get',
-        data: data,
-    }).then(result => {
+    return import('../../static/json/assetSelect.json').then(result => {
         console.log(result);
-        return getAjax(result);
+        return result.data
     })
 }
 // 规则--标签
 export const getSubjectLabel = (data) => {
-    return axios.request({
-        url: '/static/json/label.json',
-        method: 'get',
-        data: data,
-    }).then(result => {
+    return import('../../static/json/label.json').then(result => {
         console.log(result);
-        return getAjax(result);
+        return result.data
     })
 }
 // 模拟数据

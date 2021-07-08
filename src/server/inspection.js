@@ -113,14 +113,9 @@ var getAjaxSome = result => {
 
 //规则组接口
 export const get_rule_tree = (data) => {
-	return axios.request({
-		url: '/static/json/ruleTree.json',
-		method: 'get',
-		params: data.queryData,
-		data: data.paramsData,
-	}).then(result => {
-		console.log(result)
-		return getAjax(result);
+	return import('../../static/json/ruleTree.json').then(result => {
+		console.log(result , '323')
+		return result.data
 	})
 }
 

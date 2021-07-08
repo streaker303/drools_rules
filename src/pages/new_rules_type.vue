@@ -178,7 +178,7 @@
                 </div>
             </div>
         </div>
-    
+
         <el-dialog title="告警详情" :visible.sync="detailDialog" width="920px" custom-class="attendance-dialog">
             <div style="width:70%;margin: 0 auto;">
                 <div v-for="(item,index) in detailArr" :key="index" style="margin:12px 0;">
@@ -204,7 +204,7 @@
                 <cancleBtn title="取 消" @click='deployDialog = false'  />
             </div>
         </el-dialog>
-    
+
         <!--统一部署-->
         <el-dialog title="规则状态"
                    width="620px"
@@ -222,7 +222,7 @@
                 <cancleBtn title="取 消" @click='deployAllDialog = false'  />
             </div>
         </el-dialog>
-    
+
         <!--删除-->
         <!--		<el-dialog title="删除选中规则" :visible.sync="deleteDialog" width="30%" custom-class="attendance-dialog">-->
         <!--			<span>确定删除吗？</span>-->
@@ -238,7 +238,7 @@
 				<cancleBtn title="取 消" @click="deleteItemDialog = false" />
 			</span>
         </el-dialog>
-    
+
         <el-dialog title="删除选中规则" :visible.sync="deleteAllDialog" width="30%" custom-class="attendance-dialog">
             <span>确定删除吗？</span>
             <span slot="footer" class="dialog-footer">
@@ -246,7 +246,7 @@
 				<cancleBtn title="取 消" @click="deleteAllDialog = false" />
 			</span>
         </el-dialog>
-        
+
         <el-dialog title="创建规则组" :visible.sync="addRuleGroupDialog" width="600px" custom-class="attendance-dialog">
             <el-form :model="addRuleGroupForm" :rules="rules" ref="addRuleGroupForm">
                 <el-form-item label="规则组名称：" prop="name" label-width="120px">
@@ -339,7 +339,7 @@ export default {
                 children: 'childTypeInfo',
                 label: 'name'
             },
-            
+
             currentNode:{
                 id:'',
             },
@@ -369,7 +369,7 @@ export default {
             },
             currentId: '',
             editRuleDialog: false,
-            
+
             //自动处置数据
             autoDialog:false,
             task_types:[
@@ -435,7 +435,7 @@ export default {
             file_num: 0,
             flag: null,
             record_row: {},
-            
+
             rules: {
                 rule_name: [{
                     required: true,
@@ -449,7 +449,7 @@ export default {
                 }, ],
             },
             currentNodeId:'',
-    
+
             testData: [],
             isOpen: false,
             detailArr: [],
@@ -521,7 +521,7 @@ export default {
         },
     },
     mounted() {
-        
+
         this.$nextTick(() => {
             let userInfo = this.$getsessionStorage('userInfo');
             this.userId = userInfo.id;
@@ -542,7 +542,7 @@ export default {
                     width: '200px'
                 };
             }
-            
+
         },
         get_data_fields() {
             let data = {}
@@ -577,7 +577,7 @@ export default {
                 this.isFirst = false;
                 this.isClick = false;
                 this.treeData = res;
-                
+
             }).then(() => {
                 this.$refs.tree.setCheckedKeys([this.currentNodeId]);
                 this.$refs.tree.setCurrentKey(this.depId);
@@ -608,14 +608,14 @@ export default {
                 this.$refs.tree.setCheckedNodes([data]);
             }
         },
-        
+
         handleNodeClick(node) {
             this.currentNode = node;
             if(this.isClick){
                 this.currentNodeId = node.id;
             }
             this.$refs.tree.setCheckedNodes([node]);
-            
+
             console.log(node)
             this.depId = node.id;
             this.initParams();
@@ -624,7 +624,7 @@ export default {
         indexMethod(index) {
             return (this.get_params.page - 1) * this.get_params.size + index + 1;
         },
-        
+
         searchCheck() {
             this.get_params.page = 1;
             this.get_data();
@@ -655,7 +655,7 @@ export default {
                 console.log(error + 'error');
             });
         },
-        
+
         handleDeleteGroupFun() {
             let data = {
                 id: this.currentNode.id
@@ -739,7 +739,7 @@ export default {
                 }
             });
         },
-        
+
         editGroupFun() {
             let data = {
                 queryData: {},
@@ -783,7 +783,7 @@ export default {
                 console.log(error + 'error');
             });
         },
-        
+
         handleSizeChange(val) {
             this.get_params.size = val;
             this.get_data();
@@ -792,7 +792,7 @@ export default {
             this.get_params.page = val;
             this.get_data();
         },
-        
+
         handleSelectionChange(val) {
             this.multipleSelection = val;
         },
@@ -814,10 +814,10 @@ export default {
                     message: '上传成功！',
                     type: 'success'
                 })
-                
+
             }
         },
-    
+
         get_rules_type () {
             let data = {
                 queryData: {},
@@ -832,12 +832,12 @@ export default {
                 console.log(err)
             })
         },
-    
+
         searchAssets () {
             this.get_params.page = 1;
             this.get_data();
         },
-    
+
         get_data () {
             let uid = this.config_id = new Date().getTime();
             this.loading = true;
@@ -859,7 +859,7 @@ export default {
                 if(this.config_id != uid) {
                     return;
                 }
-                console.log(res);
+                console.log(res, '列表');
                 this.loading = false;
                 this.testData = res;
                 this.total_num = res.totalElements;
@@ -880,10 +880,10 @@ export default {
                         obj.isExtend = item.isExtend;
                         obj.createUserName = item.createUserName || '--';
                         obj.updateUserName = item.updateUserName || '--';
-                        
+
                         obj.dataY = item.alarm7Num ? item.alarm7Num : [0,0,0,0,0,0,0];
                         obj.dataX = ['1', '2', '3', '4', '5', '6', '7']
-                        
+
                         this.tableData.push(obj);
                         // console.log(obj.drl)
                     })
@@ -893,7 +893,7 @@ export default {
                 console.log('error' + error);
             })
         },
-    
+
         handleSee (row) {
             // console.log(row)
             let data = JSON.parse(JSON.stringify(row));
@@ -903,7 +903,7 @@ export default {
             data.modelMap = JSON.stringify(data.modelMap)
             this.$router.push({name: 'cep_show', params: data})
         },
-    
+
         handleCopySee (row) {
             // console.log(row)
             let data = JSON.parse(JSON.stringify(row));
@@ -915,7 +915,7 @@ export default {
             console.log(data)
             this.$router.push({name: 'cep_show', params: data})
         },
-        
+
         deploymentEnvironment (val) {
             if (val.isExtend === true) {
                 this.$message.warning('该规则已被其它规则继承，不能修改状态');
@@ -933,7 +933,7 @@ export default {
             this.editDeploy.status = val.status = (val.status == 1 ? 0 : 1);
             this.submitDeployForm();
         },
-    
+
         submitDeployForm (row) {
             let obj = {};
             obj.ids = [this.editDeploy.id];
@@ -949,7 +949,7 @@ export default {
                 console.log(error + 'error')
             });
         },
-    
+
         submitAllDeployForm (val) {
             let obj = {};
             console.log(this.multipleSelection)
@@ -971,7 +971,7 @@ export default {
             });
             this.deployAllDialog = false;
         },
-    
+
         deleteItemData () {
             let obj = {
                 ids: [this.deleteItemId]
@@ -991,7 +991,7 @@ export default {
                 console.log(error + 'error')
             });
         },
-    
+
         deleteAllData () {
             let ids = [];
             this.multipleSelection.forEach(item => {
@@ -1016,11 +1016,11 @@ export default {
                 console.log(error + 'error')
             });
         },
-    
+
         handleAdd () {
             this.$router.push('/home/cep_show?add=1')
         },
-    
+
         handleDeleteAll () {
             if (this.multipleSelection.length === 0) {
                 this.$message({
@@ -1031,7 +1031,7 @@ export default {
                 this.deleteAllDialog = true;
             }
         },
-    
+
         handleDeployAll (val) {
             if (this.multipleSelection.length === 0) {
                 this.$message({
@@ -1042,7 +1042,7 @@ export default {
                 this.submitAllDeployForm(val)
             }
         },
-    
+
         reload () {
             reloadData().then(res => {
                 this.$message({
@@ -1053,7 +1053,7 @@ export default {
                 console.log('error' + error)
             })
         },
-        
+
     },
     beforeDestroy () {
         if (this.flag) {
@@ -1088,7 +1088,7 @@ export default {
     position: relative;
     padding: 0 20px;
     color: #1cd7fa;
-    
+
     .el-button {
         position: absolute;
         right: 20px;
@@ -1102,19 +1102,19 @@ export default {
     background: rgba(0, 0, 0, .3);
     margin: 3px 0 20px;
     padding: 20px 0 1px;
-    
+
     .list-tit {
         width: 100px;
         text-align: right;
     }
-    
+
     .ub {
         margin-bottom: 20px;
     }
-    
+
     .list-btn {
         padding-left: 20px;
-        
+
         .el-button {
             color: #F56C6C;
         }
@@ -1136,7 +1136,7 @@ export default {
 
 .event>>>.el-upload-list__item-name {
     color: #01E9FF;
-    
+
     i {
         color: #01E9FF;
     }
@@ -1163,7 +1163,7 @@ export default {
         span:nth-child(2){
             color:#86939e!important;
         }
-        
+
     }
 }
 .tree>>>.el-tree--highlight-current .el-tree-node.is-current>.el-tree-node__content{
@@ -1257,7 +1257,7 @@ export default {
         box-shadow: 0px 0px 6px 0px #9c5603;
         left: 0;
     }
-    
+
     100% {
         background-color: #1cd7fa;
         box-shadow: 0px 0px 6px 0px #058fa9;
@@ -1270,7 +1270,7 @@ export default {
         box-shadow: 0px 0px 6px 0px #9c5603;
         left: 0;
     }
-    
+
     100% {
         background-color: #1cd7fa;
         box-shadow: 0px 0px 6px 0px #058fa9;
@@ -1283,7 +1283,7 @@ export default {
         box-shadow: 0px 0px 6px 0px #058fa9;
         left: 36px;
     }
-    
+
     100% {
         background-color: #fa941c;
         box-shadow: 0px 0px 6px 0px #9c5603;
@@ -1296,7 +1296,7 @@ export default {
         box-shadow: 0px 0px 6px 0px #058fa9;
         left: 36px;
     }
-    
+
     100% {
         background-color: #fa941c;
         box-shadow: 0px 0px 6px 0px #9c5603;

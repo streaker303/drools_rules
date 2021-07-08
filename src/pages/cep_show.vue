@@ -73,7 +73,7 @@
                         </div>
                     </el-form-item>
                 </el-form>
-    
+
                 <div class="title-line">
                     <span class="title-name">条件信息</span>
                     <!--<span @click="goResourcePool" style="cursor: pointer;float: right;color:#01E9FF;text-decoration: underline">资源池管理</span>-->
@@ -118,13 +118,13 @@
                                                                 <span v-if="after_sourceList[index].afterType" style="margin-left: 5px">时间：</span><span style="color: #d4d116">{{timeToShow(after_sourceList[index].afterType)}}</span>
                                                             </div>
                                                             <div class="operate-btn" style="position: relative;margin-left: 10px">
-                                
+
                                                                 <el-tooltip class="item"
                                                                             popper-class="atooltip"
                                                                             effect="dark" content="属性" placement="top">
                                                                     <i class="iconfont icon-shuxing" @click="openEventAttributeDialog(item, index)"></i>
                                                                 </el-tooltip>
-                                
+
                                                                 <el-dropdown trigger="click">
                                                                     <el-tooltip class="item"
                                                                                 popper-class="atooltip"
@@ -136,7 +136,7 @@
                                                                         <el-dropdown-item data-type="2" @click.native="addEventData_down($event, index)">累计</el-dropdown-item>
                                                                     </el-dropdown-menu>
                                                                 </el-dropdown>
-                                
+
                                                                 <el-dropdown trigger="click">
                                                                     <el-tooltip class="item"
                                                                                 popper-class="atooltip"
@@ -148,13 +148,13 @@
                                                                         <el-dropdown-item data-type="2" @click.native="addEventData_up($event, index)">累计</el-dropdown-item>
                                                                     </el-dropdown-menu>
                                                                 </el-dropdown>
-                                
+
                                                                 <el-tooltip class="item"
                                                                             popper-class="atooltip"
                                                                             effect="dark" content="删除" placement="top">
                                                                     <i class="el-icon-close" @click="deleteEventData(index)"></i>
                                                                 </el-tooltip>
-                                
+
                                                                 <el-popover
                                                                     class="add-step-popover"
                                                                     ref="add-step-popover"
@@ -184,15 +184,15 @@
                                                                             <i style="font-size: 14px" v-if="!noteFlag" class="iconfont icon-baocun" @click="noteFlag = !noteFlag"></i>
                                                                         </p>
                                                                     </div>
-                                    
+
                                                                     <i slot="reference" class="iconfont icon-zhushi"></i>
                                                                 </el-popover>
-                            
+
                                                             </div>
                                                         </div>
                                                         <drools_tree_data :constraintList="item.constraintList" :variate_arr="variate_arr" @upResource="upResource" @upFields="upFields" :factType="item.factType" :assetTypeList="assetTypeList" :operationSystemList="operationSystemList" :zoneNameList="zoneNameList" :subjectLabelList="subjectLabelList" first="true" style="margin-left: 52px; margin-top: 10px;position: relative;display: flex;flex-direction: column"></drools_tree_data>
                                                     </div>
-                    
+
                                                     <div class="two-type" v-if="item.type == 1">
                                                         <div class="tree-title ub ub-ac">
                                                             <i @click.stop="toogleChild_count" :class="{'iconfont icon-zhedie': true, 'is-show': true, 'fold-arrow': true}" style="position: absolute;cursor: pointer;left: -22px"></i>
@@ -210,7 +210,7 @@
                                                                             effect="dark" content="属性" placement="top">
                                                                     <i class="iconfont icon-shuxing" @click="openAccmulateDialog(item, index)"></i>
                                                                 </el-tooltip>
-                                
+
                                                                 <el-dropdown trigger="click">
                                                                     <el-tooltip class="item"
                                                                                 popper-class="atooltip"
@@ -222,7 +222,7 @@
                                                                         <el-dropdown-item data-type="2" @click.native="addEventData_down($event, index)">累计</el-dropdown-item>
                                                                     </el-dropdown-menu>
                                                                 </el-dropdown>
-                                
+
                                                                 <el-dropdown trigger="click">
                                                                     <el-tooltip class="item"
                                                                                 popper-class="atooltip"
@@ -234,13 +234,13 @@
                                                                         <el-dropdown-item data-type="2" @click.native="addEventData_up($event, index)">累计</el-dropdown-item>
                                                                     </el-dropdown-menu>
                                                                 </el-dropdown>
-                                
+
                                                                 <el-tooltip class="item"
                                                                             popper-class="atooltip"
                                                                             effect="dark" content="删除" placement="top">
                                                                     <i class="el-icon-close" @click="deleteEventData(index)"></i>
                                                                 </el-tooltip>
-                                
+
                                                                 <el-popover
                                                                     class="add-step-popover"
                                                                     ref="add-step-popover"
@@ -298,7 +298,7 @@
                                                                                 effect="dark" content="属性" placement="top">
                                                                         <i class="iconfont icon-shuxing" @click="openEventAttributeDialog(item.factMap, index)"></i>
                                                                     </el-tooltip>
-                                    
+
                                                                     <el-popover
                                                                         class="add-step-popover"
                                                                         ref="add-step-popover"
@@ -328,7 +328,7 @@
                                                                                 <i style="font-size: 14px" v-if="!noteFlag" class="iconfont icon-baocun" @click="noteFlag = !noteFlag"></i>
                                                                             </p>
                                                                         </div>
-                                        
+
                                                                         <i slot="reference" class="iconfont icon-zhushi"></i>
                                                                     </el-popover>
                                                                 </div>
@@ -338,7 +338,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-            
+
                                             <div style="padding-left: 52px;height: 30px;margin-top: 20px;position: relative" class="tree-line-outer">
                                                 <i class="iconfont icon-zhedie fold-arrow-bottom"></i>
                                                 <el-dropdown trigger="click">
@@ -349,12 +349,12 @@
                                                     </el-dropdown-menu>
                                                 </el-dropdown>
                                             </div>
-        
+
                                         </div>
                                     </div>
                                 </div>
                             </el-tab-pane>
-                            
+
                             <el-tab-pane label="自定义" name="second" style="padding: 0 !important;">
                                 <div v-if="this.activeName == 'second'">
                                     <codemirror ref="myCodemirror" v-model="eventData.define" :options="cmOptions" class="my-codemirror"></codemirror>
@@ -363,7 +363,7 @@
                         </el-tabs>
                     </div>
                 </div>
-                
+
                 <el-dialog title="属性"
                            width="940px"
                            :visible.sync="eventAttributeDialog"
@@ -453,7 +453,7 @@
                         <cancleBtn title="取 消" @click="eventAttributeDialog = false" />
                     </div>
                 </el-dialog>
-    
+
                 <el-dialog title="累计属性"
                            width="700px"
                            :visible.sync="accmulateDialog"
@@ -478,14 +478,14 @@
                             </el-select>
                             <el-input-number v-model="accmulateForm.value" label="" :controls="false" style="width: 204px"></el-input-number>
                         </el-form-item>
-                        
+
                     </el-form>
                     <div slot="footer" class="dialog-footer">
                         <searchBtn title="确 定" @click="accmulateDialogSuccess()" />
                         <cancleBtn title="取 消" @click="accmulateDialog = false" />
                     </div>
                 </el-dialog>
-    
+
                 <el-dialog title="资源池名称"
                            width="940px"
                            :visible.sync="resourceNameDialog"
@@ -512,21 +512,21 @@
                                 <el-button type="text" @click="addResourceName(scope.row)">选 择</el-button>
                             </template>
                         </el-table-column>
-        
+
                     </el-table>
-        
+
                     <div class="pagination">
                         <el-pagination background @size-change="handleSizeChange_resource" @current-change="handleCurrentChange_resource" :current-page="get_params_resource.page"
                                        :page-sizes="[10, 20, 30, 40,50]" :page-size="get_params_resource.size" layout="total, sizes, prev, pager, next" prev-text="上一页"
                                        next-text="下一页" :total="total_num_resource">
                         </el-pagination>
                     </div>
-        
+
                     <div slot="footer" class="dialog-footer">
                         <cancleBtn title="取 消" @click="resourceNameDialog = false" />
                     </div>
                 </el-dialog>
-    
+
                 <el-dialog title="规则继承"
                            width="940px"
                            :visible.sync="extendRulesDialog"
@@ -543,7 +543,7 @@
                             </el-input>
                         </el-form-item>
                     </el-form>
-                    
+
                     <el-table ref="multipleTable" v-loading="loading_extend" class='bigTable' :data="tableData_extend" border stripe tooltip-effect="dark">
                         <el-table-column align="center" type="index" width="50" :index="indexMethod_extend" label="序号">
                         </el-table-column>
@@ -554,22 +554,22 @@
                                 <el-button type="text" @click="addExtendRules(scope.row)">选 择</el-button>
                             </template>
                         </el-table-column>
-        
+
                     </el-table>
-        
+
                     <div class="pagination">
                         <el-pagination background @size-change="handleSizeChange_extend" @current-change="handleCurrentChange_extend" :current-page="get_params_extend.page"
                                        :page-sizes="[10, 20, 30, 40,50]" :page-size="get_params_extend.size" layout="total, sizes, prev, pager, next" prev-text="上一页"
                                        next-text="下一页" :total="total_num_extend">
                         </el-pagination>
                     </div>
-        
+
                     <div slot="footer" class="dialog-footer">
                         <searchBtn title="清 空" @click= "clearExtend" />
                         <cancleBtn title="取 消" @click="extendRulesDialog = false" />
                     </div>
                 </el-dialog>
-    
+
                 <el-dialog title="字段"
                            width="940px"
                            :visible.sync="fieldsDialog"
@@ -603,18 +603,18 @@
                                 <el-button type="text" @click="addFields(scope.row)">选 择</el-button>
                             </template>
                         </el-table-column>
-        
+
                     </el-table>
-        
+
                     <div slot="footer" class="dialog-footer">
                         <cancleBtn title="取 消" @click="fieldsDialog = false" />
                     </div>
                 </el-dialog>
-                
+
                 <div class="title-line">
                     <span class="title-name">输出信息</span>
                 </div>
-                
+
                 <div class="output-box">
                     <ul class="showcase_then">
                         <li v-for="(int, ind) in this.eventData.thenList"
@@ -735,7 +735,7 @@
                         </li>
                     </ul>
                 </div>
-    
+
                 <div class="title-line">
                     <span class="title-name">通知信息</span>
                 </div>
@@ -813,12 +813,12 @@ export default {
                     value: 'range'
                 }
             ],
-            
+
             /*资产下拉*/
             assetTypeList: [],
             operationSystemList: [],
             zoneNameList: [],
-            
+
             /*日志标签*/
             subjectLabelList: [],
             activeName: 'first',
@@ -826,7 +826,7 @@ export default {
             noteFlag: true,
             enObj: {}, // 中文映射成英文,对象名中文
             cnObj: {}, // 英文映射成中文，对象名英文
-    
+
             resourceNameDialog: false,
             extendRulesDialog: false,
             fieldsDialog: false,
@@ -864,7 +864,7 @@ export default {
             codeContent: '',
             cmOptions: '',
             rules: [],
-            
+
             loading: false,
             loading_resource: false,
             loading_extend: false,
@@ -890,10 +890,10 @@ export default {
             oldTime: '',
             oneData: '',
             record_id: '',
-            
+
             isExtend: false,
             isEdit: false,
-            
+
             multiFieldConstraint: [{
                 label: '...',
                 value: ''
@@ -906,7 +906,7 @@ export default {
                     label: '任意(或)',
                     value: '||'
                 }],
-            
+
             // 滑动窗口
             slideType: '',
             slideValue: '',
@@ -917,7 +917,7 @@ export default {
                 label: '数量',
                 value: 'length'
             }],
-            
+
             // 滑动窗口
             slideWindow_sourceList: [
                 // {
@@ -925,12 +925,12 @@ export default {
                 //   slideValue: ''
                 // }
             ],
-            
+
             // After
             afterType: '',
             afterValue: '',
             timeSign: '',
-            
+
             after_sourceList: [
                 // {
                 //   timeSign:'',
@@ -938,16 +938,16 @@ export default {
                 //   afterValue: ''
                 // }
             ],
-            
-            
+
+
             constraintName: '', // 选中约束字段
             // fieldBinding: '',  // 绑定变量
             currentIndex: '',  // 当前任意所有 index
             boundName: '',
             record_boundName: '',
             junctionType: '', // 多字段约束
-            
-            
+
+
             // 修改事件属性
             eventAttributeDialog: false,
             eventList: [{
@@ -1004,17 +1004,17 @@ export default {
                     value: 'VulnerabilityEvent'
                 }*/
                 ],
-            
+
             // 累计属性
             accmulateDialog: false,
-            
+
             accmulateForm: {
                 fieldBindName: '',
                 operator: '',
                 value: ''
             },
             record_fieldBindName: '',
-            
+
             common_options: [{
                 label: '等于',
                 value: '=='
@@ -1052,22 +1052,22 @@ export default {
                 label: 'not in',
                 value: 'not in'
             }],
-    
-    
+
+
             // 新建事实类型
             addModelTypes_Dialog: false,
             selectModelType: '',
-            
+
             // 修改 negeted
             negetedDialog: false,
             currentNegeted: false,
-            
+
             // 新建渠道
             name: '',
-    
+
             eventIndex: null,
             countIndex: null,
-            
+
             // Then 下拉选项
             thenKey: [{
                 label: '告警类别',
@@ -1115,7 +1115,7 @@ export default {
                 label: '是否封禁',
                 value: 'isBanned'
             },],
-            
+
             mailKey: [
                 {
                     label: '通知资产归属人',
@@ -1150,7 +1150,7 @@ export default {
                 mouldId:'',
                 status:true,
             },
-            
+
             showThen: [{
                 label: '关联规则',
                 value: '关联规则'
@@ -1161,16 +1161,16 @@ export default {
                 label: '发送短信',
                 value: 'message'
             }],
-            
+
             thenType: [], // 告警类型
-            
+
             attackResultList: [], //攻击结果
-            
+
             thenStatus: [{
                 label: '待确认',
                 value: '0'
             }],
-            
+
             thenLevel: [{
                 label: '低',
                 value: '0'
@@ -1187,7 +1187,7 @@ export default {
                 label: '高',
                 value: '4'
             }],
-            
+
             eventData: {
                 "id": "",
                 "name": "",
@@ -1287,7 +1287,7 @@ export default {
             this.query_data();
         }, 500)*/
     },
-    
+
     mounted () {
         window.addEventListener('click', (e) => {
             this.onOff = false;
@@ -1419,7 +1419,7 @@ export default {
             } else {
                 this.eventData.status=!this.eventData.status;
             }
-            
+
         },
         judgeAfter (after) {
             console.log(after)
@@ -1493,7 +1493,7 @@ export default {
         indexMethod_extend(index) {
             return (this.get_params_extend.page - 1) * this.get_params_extend.size + index + 1;
         },
-    
+
         handleSizeChange_resource(val) {
             this.get_params_resource.size = val;
             this.get_data_resource();
@@ -1560,7 +1560,7 @@ export default {
                 console.log('error' + error);
             })
         },
-    
+
         get_data_extend() {
             this.loading_extend = true;
             this.tableData_extend = [];
@@ -1591,7 +1591,7 @@ export default {
                 console.log('error' + error);
             })
         },
-    
+
         async get_data_fields() {
             // console.log("?????字段")
             this.tableData_fields = [];
@@ -1603,7 +1603,7 @@ export default {
             this.tableData_fields_MenaceEvent = [];
             this.tableData_fields_VulnerabilityEvent = [];
             let data = {}
-            
+
             let list = this.$getsessionStorage('rule_fields');
             let err;
             if (!list.length) {
@@ -1691,7 +1691,7 @@ export default {
             }
             this.init_data();
         },
-    
+
         selectChange(e) {
             console.log(e.target.dataset.type)
             let dtype = e.target.dataset.type;
@@ -1853,7 +1853,7 @@ export default {
             this.slideWindow_sourceList.splice(index, 1);
             this.after_sourceList.splice(index, 1);
         },
-    
+
         openEventAttributeDialog (item, index) {
             this.eventIndex = index;
             this.boundName = this.record_boundName = item.objBindName;
@@ -1864,7 +1864,7 @@ export default {
             this.afterValue = this.after_sourceList[index].afterValue;
             this.eventAttributeDialog = true;
         },
-        
+
         eventAttributeSuccess () {
             /*if (this.afterValue) {
                 if (!this.variate_arr.includes(after)) {
@@ -1881,7 +1881,7 @@ export default {
                 this.$message.warning('请填写AFTER的时间和变量名');
                 return ;
             }
-            
+
             console.log(this.eventIndex)
             console.log(this.eventData)
             /*判断属性，确定插入普通或累计事件中*/
@@ -1892,10 +1892,10 @@ export default {
                 this.eventData.sourceList[this.eventIndex].factMap.objBindName = this.boundName;
             }
             console.log(this.eventData.sourceList[this.eventIndex].factMap)
-            
+
             this.slideWindow_sourceList[this.eventIndex].slideType = this.slideType;
             this.slideWindow_sourceList[this.eventIndex].slideValue = this.slideValue ? this.slideValue : '';
-           
+
             this.after_sourceList[this.eventIndex].timeSign = this.timeSign;
             this.after_sourceList[this.eventIndex].afterType = this.afterType ? this.afterType : '';
             this.after_sourceList[this.eventIndex].afterValue = this.afterValue;
@@ -1919,10 +1919,10 @@ export default {
             this.eventData.sourceList[this.countIndex].countMap.constraintList[0].fieldBindName = this.accmulateForm.fieldBindName;
             this.eventData.sourceList[this.countIndex].countMap.constraintList[0].operator = this.accmulateForm.operator;
             this.eventData.sourceList[this.countIndex].countMap.constraintList[0].value = this.accmulateForm.value;
-            
+
             this.accmulateDialog = false;
         },
-        
+
         symbolKey (key) {
             return Symbol(key);
         },
@@ -1939,12 +1939,12 @@ export default {
                 _data[0].disabled = true;
                 this.isClick = false;
                 this.treeData = _data;
-                
+
             }).catch(error => {
                 console.log('error' + error);
             })
         },
-        
+
         handleClick(data,checked, node){
             if(checked){
                 // this.groupIsSelected = false;
@@ -1958,7 +1958,7 @@ export default {
         handleNodeClick(node) {
             console.log(node)
         },
-        
+
         get_rules_type () {
             let data = {
                 queryData: {},
@@ -2011,7 +2011,7 @@ export default {
             this.zoneNameList = [];
             this.assetTypeList = [];
             this.operationSystemList = [];
-            
+
             getAssetsSelect({}).then(res => {
                 console.log(res)
                 this.zoneNameList = res.aqy;
@@ -2096,26 +2096,26 @@ export default {
                     data.typeId = this.oneData.typeId;
                     this.currentGroup = this.oneData.typeName;
                 }
-                
+
                 this.getFormat_sourceList(data.sourceList);
                 this.receiveEnToChinese(data.sourceList);
                 this.splitWindow(data.sourceList, 'slideWindow_sourceList');
                 this.splitAfter(data.sourceList, 'after_sourceList');
-                
-                
+
+
                 this.eventData = data;
                 if (this.eventData.noticeMap.userIds) {
                     this.eventData.noticeMap.userIds = this.eventData.noticeMap.userIds.split(',');
                 } else {
                     this.eventData.noticeMap.userIds = [];
                 }
-                
+
                 if (this.$route.params.modelMap) {
                     this.eventData.id = this.$route.params.id;
                     this.eventData.typeId = this.$route.params.typeId;
                 }
                 this.activeName = this.eventData.mark == 1 ? 'first' : 'second';
-               
+
                 this.$setsessionStorage('eventData', JSON.stringify(this.eventData));
                 this.$setsessionStorage('data_typeName', JSON.stringify(this.currentGroup));
             } else {
@@ -2152,7 +2152,7 @@ export default {
                 callback && callback.call(_this);
             }
         },
-        
+
         sendModelData () {
             // if(this.currentGroup ==''){
             //     this.groupIsSelected = true;
@@ -2166,7 +2166,7 @@ export default {
             this.loading = true;
             document.getElementById('container').style.overflow = 'hidden';
             let data = JSON.parse(JSON.stringify(this.eventData));
-            
+
             if (this.activeName === 'first') {
                 data.define = ''
                 data.mark = 1;
@@ -2214,12 +2214,12 @@ export default {
                     }
                 }
             })
-            
+
             this.sendFormat_sourceList(data.sourceList);
             this.sendChineseToEn(data.sourceList);
             data.noticeMap.userIds = data.noticeMap.userIds.join(',');
             data.status = data.status ? 1 : 0;
-            
+
             buildDrools(data).then(res => {
                 if (document.getElementsByClassName('el-message').length === 0) {
                     this.$message({
@@ -2238,7 +2238,7 @@ export default {
                 console.log(error + 'error')
             })
         },
-        
+
         // 解析 function 字段
         splitCondition (val, type) {
             let regex = /\((.+?)\)/g;
@@ -2257,8 +2257,8 @@ export default {
                 return '';
             }
         },
-        
-       
+
+
         add_thenChild (ind) {
             this.eventData.thenList.splice(ind+1, 0,
                 {
@@ -2267,11 +2267,11 @@ export default {
                 }
             )
         },
-        
+
         del_thenChild (ind) {
             this.eventData.thenList.splice(ind, 1);
         },
-        
+
         //  递归回显
         getFormatData (arr) {
             arr.forEach(tmp => {
@@ -2294,7 +2294,7 @@ export default {
                 }
             })
         },
-        
+
         //  递归回显第1个数组
         getFormat_sourceList (arr) {
             arr.forEach(item => {
@@ -2307,7 +2307,7 @@ export default {
                 }
             })
         },
-        
+
         // 发送递归
         sendFormatData (arr) {
             arr.forEach(tmp => {
@@ -2335,7 +2335,7 @@ export default {
                 }
             })
         },
-        
+
         // 递归发送第1个数组
         sendFormat_sourceList (arr) {
             arr.forEach(item => {
@@ -2357,7 +2357,7 @@ export default {
                 }
             })
         },
-        
+
         cnToEn (arr) {
             arr.forEach(it => {
                 if (it.dataType == 1) {
@@ -2374,7 +2374,7 @@ export default {
                 }
             })
         },
-        
+
         //接收数据时递归遍历数据，将变量字段英文转中文
         receiveEnToChinese (arr) {
             arr.forEach(item => {
@@ -2385,7 +2385,7 @@ export default {
                 }
             })
         },
-        
+
         enToCn (arr) {
             arr.forEach(it => {
                 if (it.dataType == 1) {
@@ -2403,7 +2403,7 @@ export default {
                 }
             })
         },
-        
+
         // 解析滑动窗口字段
         splitWindow (arr, type) {
             arr.forEach(item => {
@@ -2444,7 +2444,7 @@ export default {
                 }
             })
         },
-        
+
         // 解析after字段
         splitAfter (arr, type, num) {
             arr.forEach(item => {
@@ -2497,7 +2497,7 @@ export default {
                 }
             })
         },
-        
+
         // 滑动窗口时间转换
         timeToStr (time, show) {
             // console.log(time)
@@ -2510,7 +2510,7 @@ export default {
                 return time;
             }
         },
-        
+
         timeToShow (time) {
             let copy_time = JSON.parse(JSON.stringify(time));
             if (typeof copy_time === 'string') {
@@ -2534,14 +2534,14 @@ export default {
                 return copy_time;
             }
         },
-        
+
         strToTime (str) {
             str = str.replace('h', '-');
             str = str.replace('m', '-');
             str = str.replace('s', '');
             return str;
         },
-        
+
     },
 }
 
@@ -2571,7 +2571,7 @@ export default {
     background-repeat: no-repeat;
     background-position-x: right;
     background-position-y: 180px;
-    
+
 }
 .bg-area {
     margin-top: 0px !important;
@@ -2599,7 +2599,7 @@ export default {
     margin-bottom: 30px;
     margin-left: -20px;
     border-bottom: 1px solid rgba(28,215,250,0.2);
-    
+
     .title-name {
         color: #fff;
         font-size: 14px;
@@ -2657,7 +2657,7 @@ export default {
         box-shadow: 0px 0px 10px 0px #9c5603;
         left: 0;
     }
-    
+
     100% {
         background-color: #1cd7fa;
         box-shadow: 0px 0px 10px 0px #058fa9;
@@ -2670,7 +2670,7 @@ export default {
         box-shadow: 0px 0px 10px 0px #9c5603;
         left: 0;
     }
-    
+
     100% {
         background-color: #1cd7fa;
         box-shadow: 0px 0px 10px 0px #058fa9;
@@ -2683,7 +2683,7 @@ export default {
         box-shadow: 0px 0px 10px 0px #058fa9;
         left: 42px;
     }
-    
+
     100% {
         background-color: #fa941c;
         box-shadow: 0px 0px 10px 0px #9c5603;
@@ -2696,7 +2696,7 @@ export default {
         box-shadow: 0px 0px 10px 0px #058fa9;
         left: 42px;
     }
-    
+
     100% {
         background-color: #fa941c;
         box-shadow: 0px 0px 10px 0px #9c5603;
@@ -3021,7 +3021,7 @@ div.addRule {
         span:nth-child(2){
             color:#86939e!important;
         }
-        
+
     }
 }
 .tree>>>.el-tree--highlight-current .el-tree-node.is-current>.el-tree-node__content{
@@ -3068,10 +3068,10 @@ div.addRule {
 
 .inform-box {
     margin-bottom: 80px;
-    
+
     >>> .el-form-item {
         margin-bottom: 10px;
-    
+
         .el-checkbox__label {
             color: #fff;
         }
@@ -3079,7 +3079,7 @@ div.addRule {
             color: #0af0f3;
         }
     }
-    
+
 }
 
 .el-select > > > .el-tag {

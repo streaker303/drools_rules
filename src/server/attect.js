@@ -114,14 +114,9 @@ var getAjaxSome = result => {
 
 // 获取列表
 export const getDrools = (data) => {
-	return axios.request({
-		url: '/static/json/ruleList.json',
-		method: 'get',
-        params: data.queryData,
-        data: data.paramsData,
-	}).then(result => {
+	return import('../../static/json/ruleList.json').then(result => {
 		console.log(result);
-		return getAjax(result);
+		return result.data
 	})
 }
 
@@ -230,38 +225,23 @@ export const editResource= (data) => {
 }
 // 查询资源池
 export const selectResourcePool= (data) => {
-	return axios.request({
-		url: '/static/json/resourcePool.json',
-		method: 'get',
-		data: data,
-	}).then(result => {
+	return import('../../static/json/resourcePool.json').then(result => {
 		console.log(result);
-		return new Promise((resolve, reject) => {
-			resolve(result.data);
-		})
+		result.data
 	})
 }
 //查询字段
 export const get_fields= (data) => {
-    return axios.request({
-        url: '/static/json/field.json',
-        method: 'get',
-        data: data,
-    }).then(result => {
+    return import('../../static/json/field.json').then(result => {
         console.log(result);
-        return getAjax(result);
+		return result.data
     })
 }
 //规则继承
 export const get_extendRules= (data) => {
-    return axios.request({
-        url: '/static/json/extendRule.json',
-        method: 'get',
-        params: data.queryData,
-        data: data.paramsData,
-    }).then(result => {
+    return import('../../static/json/extendRule.json').then(result => {
         console.log(result);
-        return getAjax(result);
+		return result.data
     })
 }
 // 查询资源
@@ -314,12 +294,8 @@ export const get_one_rule= (data) => {
 
 // 查询邮箱/短信人员
 export const get_mail_users= (data) => {
-    return axios.request({
-        url: '/static/json/mail.json',
-        method: 'get',
-        data: data,
-    }).then(result => {
+    return import('../../static/json/mail.json').then(result => {
         console.log(result);
-        return getAjax(result);
+		return result.data
     })
 }
