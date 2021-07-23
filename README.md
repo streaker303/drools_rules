@@ -1,21 +1,13 @@
-# info-safe
+# drools_rules
 
-> A Vue.js project
+## 在线链接
+[https://streaker303.github.io/drools_rules/dist/#/home/rule](https://streaker303.github.io/drools_rules/dist/#/home/rule)
 
-## Build Setup
+## 项目介绍
+实现规则的平行和向内无限添加，组装后台drools需要的数据结构
+- `jquery`实现递归组件的展开与折叠
+- 伪类虚线样式
+- 支持增删改
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## TODO
+- 抽离组件，合理模块化
