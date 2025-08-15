@@ -10,53 +10,35 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    // Various Dev Server settings
     host: '127.0.0.1', // can be overwritten by process.env.HOST
-		// host: '192.168.124.10', // can be overwritten by process.env.HOST
-		// host: '192.168.91.214', // can be overwritten by process.env.HOST
     port: 8093, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
-    poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
+    poll: false,
 		proxyTable: {
 			'/api': {
-				//target: 'http://dnscn.zicp.vip/', //需要代理的地址
-				target: 'http://10.11.102.45:20198/', //需要代理的地址
-				// target: 'http://192.168.91.64:8081/', //周威本地
-				//target: 'http://192.168.39.13:8080/', //需要代理的地址
+				target: 'http://xxxxx/', //需要代理的地址
 				changeOrigin: true,
 				pathRewrite: {
 					'^/api': '' //本身的接口地址没有 '/api' 这种通用前缀，所以要rewrite，如果本身有则去掉
 				},
 			},
 			'/imgServer': {
-				 //target: 'http://192.168.91.218:8081/', //需要代理的地址
-				target: 'http://10.11.102.15:7699/', //需要代理的地址
+				target: 'http://xxxx/', //需要代理的地址
 			    changeOrigin: true,
 			    pathRewrite: {
 			        '^/imgServer': '' //本身的接口地址没有 '/api' 这种通用前缀，所以要rewrite，如果本身有则去掉
 			    },
 			},
              '/base': {
-				 // target: ' http://10.11.102.15:19180/', //需要代理的地址
-				target: 'http://10.11.102.44:20018/', //需要代理的地址
+				target: 'http://xxxxx/', //需要代理的地址
                 changeOrigin: true,
                 pathRewrite: {
                     '^/base': '' //本身的接口地址没有 '/api' 这种通用前缀，所以要rewrite，如果本身有则去掉
-                },
-            },
-
-            // '/attect': {
-            //   target: 'http://10.11.102.44:20088/', //需要代理的地址
-            //   changeOrigin: true,
-            //   ws: true,
-            //   secure: false,
-            //   pathRewrite: {
-            //     '^/attect': '' //本身的接口地址没有 '/api' 这种通用前缀，所以要rewrite，如果本身有则去掉
-            //   },
-            // },
-		},
+                }
+            }
+		}
 
 
     /**
